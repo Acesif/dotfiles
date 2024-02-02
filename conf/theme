@@ -1,0 +1,8 @@
+#! /bin/bash
+
+xwallpaper --zoom /home/$USER/dotfiles/pictures/cyborg.jpg
+
+wal -c 
+wal -i /home/$USER/dotfiles/pictures/cyborg.jpg
+
+xdotool key super+F5
