@@ -2,18 +2,15 @@
 
 sudo pacman -Sy --noconfirm libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool
 sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
-paru -Sy --noconfirm clipmenu-git ttf-ms-fonts
-cd ~
-mkdir -p .local/src
-cp -r ~/dotfiles/src/* ~/.local/src
-cd ~/.local/src/dwm
-sudo make clean install
-cd ~/.local/src/dmenu
-sudo make clean install
-cd ~/.local/src/st
-sudo make clean install
+paru -Sy --noconfirm clipmenu-git ttf-ms-fonts nemo
 
-cd ~/dotfiles
+mkdir -p /home/$USER/.local/src
+cp -r /home/$USER/dotfiles/src/* /home/$USER/.local/src
+cd /home/$USER/.local/src/dwm && sudo make clean install
+cd /home/$USER/.local/src/dmenu && sudo make clean install
+cd /home/$USER/.local/src/st && sudo make clean install
+
+cd /home/$USER/dotfiles
 
 cp .bash_profile .bashrc .xinitrc .gitconfig ~/
 
