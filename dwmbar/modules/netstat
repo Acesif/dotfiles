@@ -1,0 +1,15 @@
+#!/bin/bash
+
+get_down_traffic()
+{
+	if [[ "$(ping -c 1 8.8.8.8 | grep "Network" )" == "ping: connect: Network is unreachable" ]]; then
+	    echo "🚫"
+	    exit 1
+	else
+	    echo "🌐"
+	fi
+}
+get_down_traffic
+
+
+

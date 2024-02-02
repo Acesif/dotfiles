@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Prints out the volume percentage
+
+VOLUME_ON_ICON='In:'
+VOLUME_MUTED_ICON='Mute'
+
+get_volume(){
+        curStatus=$(pactl get-source-mute @DEFAULT_SOURCE@)
+	volume=$(pactl get-source-volume @DEFAULT_SOURCE@ | tail -n 2 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,' | head -n 1)
+
+        if [ "${curStatus}" = 'Mute: yes' ]
+        then
+            echo "$VOLUME_MUTED_ICON $volume%"
+        else
+            echo "$VOLUME_ON_ICON $volume%"
+        fi
+}
+
+get_volume
