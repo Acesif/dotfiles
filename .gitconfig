@@ -1,0 +1,7 @@
+[user]
+	email = 36653429+Acesif@users.noreply.github.com 
+	name = Acesif
+[credential]
+	helper = cache
+[init]
+	defaultBranch = main
