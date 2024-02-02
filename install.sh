@@ -1,6 +1,5 @@
 #! /bin/bash
-pacman -Sy git libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool
-
+sudo pacman -Sy git libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool
 sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
 paru -Sy clipmenu-git ttf-ms-fonts
 cd ~
