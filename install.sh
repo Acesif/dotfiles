@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -Sy --noconfirm libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool
+sudo pacman -Sy --noconfirm libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool python-pywal noto-fonts-emoji
 sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
 paru -Sy --noconfirm clipmenu-git ttf-ms-fonts nemo
 
