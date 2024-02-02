@@ -36,10 +36,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-~/jdw &
+/home/$USER/dotfiles/conf/jdw &
 udiskie &
 clipmenud &
-~/theme &
+/home/$USER/dotfiles/conf/theme &
 xbindkeys &
 xcompmgr &
 dwmbar &
