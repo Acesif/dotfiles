@@ -14,6 +14,6 @@ make clean install
 
 cd ~/dotfiles
 
-cp .bash_profile .bashrc .xinitrc ~/
+cp .bash_profile .bashrc .xinitrc .gitconfig ~/
 
 echo "Setup Complete!"
