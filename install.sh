@@ -1,24 +1,19 @@
 #! /bin/bash
-su
-
 pacman -Sy git libxft libxinerama vim neovim wmname udiskie xbindkeys xcompmgr numlockx xwallpaper xdotool ttf-ms-fonts
 
-pacman -Sy --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si 
-
-yay -Sy clipmenud
-
+sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
+paru -Sy clipmenud
+cd ~
 mkdir -p .local/src
-cp -r dotfiles/src/* ~/.local/src
-cd .local/src
-
-cd dwm
+cp -r ~/dotfiles/src/* ~/.local/src
+cd ~/.local/src/dwm
 make clean install
-cd ../dmenu
+cd ~/.local/src/dmenu
 make clean install
-cd ../st
+cd ~/.local/src/st
 make clean install
 
-cd dotfiles
+cd ~/dotfiles
 
 cp .bash_profile .bashrc .xinitrc ~/
 
