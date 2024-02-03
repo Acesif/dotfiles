@@ -1,4 +1,4 @@
 #! /bin/bash
 line_number=$(grep -n "ExecStart" /etc/systemd/system/getty.target.wants/getty\@tty1.service | cut -d : -f 1)
-sed "${line_number}s/.*/ExecStart=-\/sbin\/agetty -a \${USER} - \${TERM}/" /etc/systemd/system/getty.target.wants/getty\@tty1.service > temp_file
+sed "${line_number}s/.*/ExecStart=-\/sbin\/agetty -a \$USER - \$TERM/" /etc/systemd/system/getty.target.wants/getty\@tty1.service > temp_file
 #mv temp_file /etc/systemd/system/getty.target.wants/getty\@tty1.service
